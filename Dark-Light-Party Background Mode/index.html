@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <title>Cuy University SESI 6</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a onclick="reRender()" id="home">HOME</a>
+            <a onclick="changeMode()" id="change">MODE</a>
+            <a onclick="darkMode()" id="dark">DARK MODE</a>
+            <a onclick="lightMode()" id="light">LIGHT MODE</a>
+            <a onclick="partyMode()" id="party">PARTY MODE</a>
+        </nav>
+        <h1>SESI 6 CUY UNIVERSITY</h1>
+        <p class="info" id="info"></p>
+    </div>
+
+    <!-- initializing function script -->
+    <script>
+        let body = document.body;
+        let info = document.getElementById("info");
+        let change = document.getElementById("change");
+        let dark = document.getElementById("dark");
+        let light = document.getElementById("light");
+        let party = document.getElementById("party");
+      
+        const changeLimit = 5;
+        let changeCounter = 0;
+        let changeRemainingLeft;
+
+        light.style.display = "none";
+
+        function changeMode() {
+            if (changeRemainingLeft == 1) {
+                info.textContent = "JATAH FITUR DARKMODE ANDA SUDAH HABIS";
+                change.style.display = "none";
+                home.textContent = "RESTAR";
+                return;
+            }
+            changeCounter += 1;
+            changeRemainingLeft = changeLimit - changeCounter;
+
+            // render ke info element
+            info.textContent = `Mode dipakai ${changeCounter}x, tersisa${changeRemainingLeft}`
+            dark.style.display = "none";
+            party.style.display = "none";
+            body.classList.toggle("change");
+        }
+
+        function darkMode() {
+            home.textContent = "RESTAR";
+            change.style.display = "none";
+            party.style.display = "none";
+            body.classList.add("change");
+            dark.style.display = "none";
+            light.style.display = "block";
+        }
+
+        function lightMode() {
+            home.textContent = "RESTAR";
+            change.style.display = "none";
+            party.style.display = "none";
+            body.classList.toggle("change");
+            light.style.display = "none";
+            dark.style.display = "block";
+        }
+
+        function partyMode() {
+            info.textContent = "MODE PARTY";
+            home.textContent = "RESTAR";
+            change.style.display = "none";
+            dark.style.display = "none";
+            party.style.display = "none";
+            body.classList.toggle("party");
+            return;
+        }
+
+        function reRender() {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>WEBSITE PERTAMA</title>
+    
+</head>
+
+<body>
+    <header class="animate__animated animate__backInDown animate__faster">
+        <div class="logo animate__animated animate__swing animate__infinite animate__slower	1s">
+            <img src="assets/icons/partner.png" alt="logo" class="logo-img" />
+            <h1 class="logo-title animate__animated animate__swing animate__infinite animate__slower 1s">Tommy X </h1>
+
+        </div>
+
+        <nav>
+            <ul>
+                <li> <a href="#jasa">JASA</a> </li>
+                <li> <a href="mailto:payukallo@gmail.com">KONTAK</a> </li>
+            </ul>
+        </nav>
+        <button class="btn-cta" onclick="redirInstagram()">FOLLOW SAYA</button>
+    </header>
+    <div class="container">
+        <div class="intro">
+            <p class="title animate__animated animate__backInLeft">Hello Tommy Here</p>
+            <p class="description animate__animated animate__backInRight">Beginner Coder</p>
+            <img src="assets/images/tommy1.jpg" alt="Tommy foto 1" class="img-foto animate__animated animate__backInUp" />
+        </div>
+    </div>
+    <div class="parallax">
+        <div class="tentang">
+            <p class="title">Saya adalah programer</p>
+            <p class="description">Ngoding aja dulu, jagonya belakangan.</p>
+            <div class="mt-10">
+                <button class="btn-cta" onclick="redirWhatsapp()">Mari Kerjasama</button>
+            </div>
+        </div>
+        <div class="container animate__animated animate__bounceIn animate__infinite animate__slower	3s">
+            <div class="cards " id="jasa">
+                <div class="card-item">
+                    <img src="assets/icons/24-hours.png" alt="icon1" class="icon" />
+                    <p class="card-title">Perlayanan Nonstop</p>
+                    <p class="card-description">Servis 24/7 selalu sedia kapan pun anda butuh pelayanan.</p>
+                </div>
+                <div class="card-item">
+                    <img src="assets/icons/hot-deal.png" alt="icon2" class="icon" />
+                    <p class="card-title">Saya Programer Newbie</p>
+                    <p class="card-description">Harga sangat terjangkau.</p>
+                </div>
+                <div class="card-item">
+                    <img src="assets/icons/rating.png" alt="icon3" class="icon" />
+                    <p class="card-title">682 Review</p>
+                    <p class="card-description">Client pasti puas jika tidak uang kembali.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="title">&copy; Tommy Payuk Allo Website 2026</p>
+    </footer>
+
+    <script>
+        function redirInstagram() {
+            window.location.href = "https://instagram.com/home"
+        }
+        function redirWhatsapp() {
+            window.location.href = "https://wa.me/+6282349011097"
+        }
+
+    </script>
+
+
+</body>
+
+</html>
